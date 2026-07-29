@@ -14,9 +14,6 @@ class Program
         miMoto.CargarGasolina(15);
         miMoto.verGasolina();
 
-        miCarro.CargarGasolina(20);
-        miCarro.verGasolina();
-
         // POLIMORFISMO
         Console.WriteLine("\nArrancando los vehículos:");
         miCarro.Arrancar();
