@@ -7,7 +7,7 @@ namespace Semana2
         // 4. POLIMORFISMO (Parte 2: La implementación)
         public override void Arrancar()
         {
-            Console.WriteLine($"[{marca} {modelo}] Patada al pedal... ¡RATATA-TA! (Ruido agudo)");
+            Console.WriteLine($"[{marca} {modelo}] Patada al pedal... ¡RATATA-TA! (Ruido de motor de moto)");
         }
     }
 }
