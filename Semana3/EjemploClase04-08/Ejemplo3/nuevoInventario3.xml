@@ -1,0 +1,14 @@
+<Inventario>
+  <Producto id="101">
+    <Nombre>Monitor 4K</Nombre>
+    <Stock>15</Stock>
+  </Producto>
+  <Producto id="102">
+    <Nombre>Mouse Gamer</Nombre>
+    <Stock>50</Stock>
+  </Producto>
+  <Producto id="789">
+    <Nombre>Escritorio </Nombre>
+    <Stock>5</Stock>
+  </Producto>
+</Inventario>
