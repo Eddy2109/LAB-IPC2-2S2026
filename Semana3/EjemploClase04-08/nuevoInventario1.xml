@@ -2,14 +2,14 @@
 <Inventario>
   <Producto id="101">
     <Nombre>Monitor 4K</Nombre>
-    <Stock>15</Stock>
+    <Stock>30</Stock>
   </Producto>
   <Producto id="102">
     <Nombre>Mouse Gamer</Nombre>
-    <Stock>65</Stock>
+    <Stock>50</Stock>
   </Producto>
-  <Producto id="123">
-    <Nombre>Teclado Gamer</Nombre>
-    <Stock>75</Stock>
+  <Producto id="103">
+    <Nombre>teclado gamer</Nombre>
+    <Stock>5</Stock>
   </Producto>
 </Inventario>
