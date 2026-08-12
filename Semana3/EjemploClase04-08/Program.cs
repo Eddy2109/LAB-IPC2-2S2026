@@ -103,6 +103,8 @@ namespace Ejemplo3
             //leer el archivo XML
             XDocument doc = XDocument.Load(rutaArchivo);
 
+            Console.WriteLine(doc);
+
             // guardar los productos en la lista enlazada
             foreach (var producto in doc.Descendants("Producto"))
             {
@@ -110,6 +112,11 @@ namespace Ejemplo3
                 string nombre = producto.Element("Nombre").Value;
                 string stock = producto.Element("Stock").Value;
                 lista.agregarProducto(id, nombre, stock);
+            }
+
+            foreach (var venta in doc.Descendants("Ventas"))
+            {
+                Console.WriteLine("Esto es equivalente a robots en los archivos de entrada");
             }
 
             // mostramos los productos guardados en la lista enlazada
