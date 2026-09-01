@@ -13,12 +13,18 @@ class Program
         int fila = 0;
         int columna = 0;
 
-        String fila1 = "*****";
-        String fila2 = "E    ";
-        String fila3 = "**** ";
-        String fila4 = "***  ";
-        String fila5 = " R  *";
-        String fila6 = "*****";
+            // <fila numero="1">"**********"</fila>
+			// <fila numero="2">"* E*****C*"</fila>
+			// <fila numero="3">"* *   **R*"</fila>
+			// <fila numero="4">"*   *    *"</fila>
+			// <fila numero="5">"**********"</fila>
+
+        String fila1 = "*******X**";
+        String fila2 = "* E*****C*";
+        String fila3 = "* *   **R*";
+        String fila4 = "*   * M  *";
+        String fila5 = "**********";
+       
 
         for(int i = 0; i < fila1.Length; i++)
         {
@@ -40,10 +46,26 @@ class Program
         {
             matriz.Insertar(fila5[i], 5, i+1);
         }
-        for(int i = 0; i < fila6.Length; i++)
-        {
-            matriz.Insertar(fila6[i], 6, i+1);
-        }
+        // for(int i = 0; i < fila6.Length; i++)
+        // {
+        //     matriz.Insertar(fila6[i], 6, i+1);
+        // }
+        // for(int i = 0; i < fila7.Length; i++)
+        // {
+        //     matriz.Insertar(fila7[i], 7, i+1);
+        // }
+        // for(int i = 0; i < fila8.Length; i++)
+        // {
+        //     matriz.Insertar(fila8[i], 8, i+1);
+        // }
+        // for(int i = 0; i < fila9.Length; i++)
+        // {
+        //     matriz.Insertar(fila9[i], 9, i+1);
+        // }
+        // for(int i = 0; i < fila10.Length; i++)
+        // {
+        //     matriz.Insertar(fila10[i], 10, i+1);
+        // }
 
         matriz.ImprimirCuadrula();
 

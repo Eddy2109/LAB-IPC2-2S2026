@@ -217,7 +217,7 @@ namespace IntroProyecto1
             string dotFilePath = "Matriz.dot";
             string pngFilePath = "Matriz.png";
 
-            nodo fila = raiz;
+            nodo fila = raiz.abajo;
 
             StringBuilder dot = new StringBuilder();
             dot.AppendLine("digraph MatrizOrtogonal {");
@@ -234,7 +234,7 @@ namespace IntroProyecto1
                 nodo temp = fila.siguiente;
                 while (temp != null)
                 {
-                    dot.AppendLine($"        <td>{temp.fila},{temp.columna}</td>");
+                    dot.AppendLine($"        <td>{temp.dato}</td>");
                     temp = temp.siguiente;
                 }
 
