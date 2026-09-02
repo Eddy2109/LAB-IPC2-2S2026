@@ -1,0 +1,5 @@
+digraph AVL {
+    node [shape=circle];
+    30 -> 20;
+    30 -> 40;
+}
