@@ -67,20 +67,20 @@ class ArbolAVL
         return y;
     }
 
-    private Nodo Insertar(Nodo nodo, int valor)
+    private Nodo Insertar(Nodo nodo, int codigo, string curso)
     {
         // 1. Insertar como ABB
         if (nodo == null)
-            return new Nodo(valor);
+            return new Nodo(codigo, curso);
 
-        if (valor < nodo.Valor)
-            nodo.Izquierdo = Insertar(nodo.Izquierdo, valor);
+        if (codigo < nodo.Codigo)
+            nodo.Izquierdo = Insertar(nodo.Izquierdo, codigo, curso);
 
-        else if (valor > nodo.Valor)
-            nodo.Derecho = Insertar(nodo.Derecho, valor);
+        else if (codigo > nodo.Codigo)
+            nodo.Derecho = Insertar(nodo.Derecho, codigo, curso);
 
         else
-            return nodo;
+            return nodo;    
 
         // 2. Actualizar altura
         nodo.Altura = 1 + Math.Max(
@@ -92,21 +92,21 @@ class ArbolAVL
         int balance = FactorBalance(nodo);
 
         // 4. LL
-        if (balance > 1 && valor < nodo.Izquierdo.Valor)
+        if (balance > 1 && codigo < nodo.Izquierdo.Codigo)
         {
             // Graficar();
             return RotacionDerecha(nodo);
         }
 
         // 5. RR
-        if (balance < -1 && valor > nodo.Derecho.Valor)
+        if (balance < -1 && codigo > nodo.Derecho.Codigo)
         {
             // Graficar();
             return RotacionIzquierda(nodo);
         }
 
         // 6. LR
-        if (balance > 1 && valor > nodo.Izquierdo.Valor)
+        if (balance > 1 && codigo > nodo.Izquierdo.Codigo)
         {
             nodo.Izquierdo =
                 RotacionIzquierda(nodo.Izquierdo);
@@ -115,7 +115,7 @@ class ArbolAVL
         }
 
         // 7. RL
-        if (balance < -1 && valor < nodo.Derecho.Valor)
+        if (balance < -1 && codigo < nodo.Derecho.Codigo)
         {
             nodo.Derecho =
                 RotacionDerecha(nodo.Derecho);
@@ -126,9 +126,9 @@ class ArbolAVL
         return nodo;
     }
 
-    public void Insertar(int valor)
+    public void Insertar(int codigo, string curso)
     {
-        Raiz = Insertar(Raiz, valor);
+        Raiz = Insertar(Raiz, codigo, curso);
     }
 
     public void ImprimirInOrder()
@@ -142,7 +142,7 @@ class ArbolAVL
         if (nodo_actual != null)
         {
             InOrder(nodo_actual.Izquierdo);
-            Console.Write($"{nodo_actual.Valor} ");
+            Console.Write($"{nodo_actual.Codigo} - {nodo_actual.Curso} ");
             InOrder(nodo_actual.Derecho);
         }
     }
@@ -213,7 +213,7 @@ class ArbolAVL
         if (nodo.Izquierdo != null)
         {
             dot.AppendLine(
-                $"    {nodo.Valor} -> {nodo.Izquierdo.Valor};"
+                $"    {nodo.Codigo} -> {nodo.Izquierdo.Codigo};"
             );
 
             GenerarDot(nodo.Izquierdo, dot);
@@ -223,7 +223,7 @@ class ArbolAVL
         if (nodo.Derecho != null)
         {
             dot.AppendLine(
-                $"    {nodo.Valor} -> {nodo.Derecho.Valor};"
+                $"    {nodo.Codigo} -> {nodo.Derecho.Codigo};"
             );
 
             GenerarDot(nodo.Derecho, dot);

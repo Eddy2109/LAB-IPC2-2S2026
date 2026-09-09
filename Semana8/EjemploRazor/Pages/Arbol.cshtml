@@ -1,0 +1,43 @@
+@page
+@model ArbolModel
+
+@{
+    ViewData["Title"] = "Árbol AVL";
+}
+
+<div class="container">
+
+    <h1>Árbol AVL</h1>
+
+    @if (!Model.ArbolExiste)
+    {
+        <div class="mensaje">
+            El árbol todavía está vacío.
+        </div>
+    }
+    else
+    {
+        <p>
+            El árbol contiene información.
+        </p>
+
+        @if (Model.ImagenGenerada)
+        {
+            <div class="arbol-container">
+
+                <img src="/images/ArbolAVL.png?v=@DateTime.Now.Ticks" alt="Árbol AVL generado con Graphviz"
+                     class="arbol-imagen" />
+
+            </div>
+        }
+        else
+        {
+            <div class="mensaje">
+
+                El árbol existe, pero Graphviz no pudo generar
+                la imagen.
+
+            </div>
+        }
+    }
+</div>

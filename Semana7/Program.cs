@@ -8,13 +8,13 @@ class Program
 
         // Insertar nodos en el árbol AVL
         
-        arbol.Insertar(20);
-        arbol.Insertar(30);
-        arbol.Insertar(40);
-        // arbol.Insertar(10);
-        // arbol.Insertar(25);
-        // arbol.Insertar(35);
-        // arbol.Insertar(50);
+        arbol.Insertar(20, "Introducción a la programación");
+        arbol.Insertar(30, "Estructuras de datos");
+        arbol.Insertar(40, "Algoritmos");
+        arbol.Insertar(10, "Fundamentos de computación");
+        arbol.Insertar(25, "Programación orientada a objetos");
+        arbol.Insertar(35, "Base de datos");
+        arbol.Insertar(50, "Sistemas operativos");
 
         // Imprimir el árbol en orden
         arbol.ImprimirInOrder();

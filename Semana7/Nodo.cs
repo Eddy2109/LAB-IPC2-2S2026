@@ -2,15 +2,17 @@ namespace Semana7
 {
     public class Nodo
     {
-        public int Valor { get; set; }
+        public int Codigo { get; set; }
+        public string Curso { get; set; }
         public Nodo Izquierdo { get; set; }
         public Nodo Derecho { get; set; }
 
         public int Altura { get; set; }
 
-        public Nodo(int valor)
+        public Nodo(int codigo, string curso)
         {
-            Valor = valor;
+            Codigo = codigo;
+            Curso = curso;
             Izquierdo = null;
             Derecho = null;
             Altura = 1;

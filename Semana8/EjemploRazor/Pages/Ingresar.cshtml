@@ -1,0 +1,53 @@
+@page
+@model IngresarModel
+
+@{
+    ViewData["Title"] = "Ingresar Nodo";
+}
+
+<div class="container">
+
+    <h1>Agregar curso al árbol AVL</h1>
+
+    <p>
+        Ingrese el código y el nombre del curso.
+    </p>
+
+    <form method="post">
+
+        <div class="form-group">
+
+            <label asp-for="Datos.Codigo">
+                Código
+            </label>
+
+            <input asp-for="Datos.Codigo" type="number" class="form-control" required />
+
+        </div>
+
+        <div class="form-group">
+
+            <label asp-for="Datos.Curso">
+                Curso
+            </label>
+
+            <input asp-for="Datos.Curso" type="text" class="form-control" required />
+
+        </div>
+
+        <button type="submit" class="btn btn-primary">
+            Agregar al árbol
+        </button>
+
+    </form>
+
+    @if (!string.IsNullOrEmpty(Model.Datos.Mensaje))
+    {
+        <div class="mensaje">
+
+            @Model.Datos.Mensaje
+
+        </div>
+    }
+
+</div>

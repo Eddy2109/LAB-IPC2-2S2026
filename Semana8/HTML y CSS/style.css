@@ -1,0 +1,112 @@
+/* 1. CONFIGURACIÓN GENERAL */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px;
+}
+
+/* Centrar el contenido para que no ocupe todo el ancho en pantallas grandes */
+header, section, footer {
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* 2. TÍTULOS */
+h1 {
+    color: #2c3e50;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: #34495e;
+    margin-top: 0;
+}
+
+/* 3. LISTAS */
+ul {
+    list-style-type: none; /* Quitamos los puntos básicos */
+    padding-left: 0;
+}
+
+ul li {
+    background: #e8f4fd;
+    margin-bottom: 8px;
+    padding: 10px;
+    border-left: 5px solid #3498db;
+    border-radius: 4px;
+}
+
+/* 4. IMÁGENES */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+/* 5. TABLAS */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Bordes elegantes */
+    margin: 20px 0;
+}
+
+table th, table td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #3498db;
+    color: white;
+}
+
+table tr:hover {
+    background-color: #f9f9f9; /* Efecto al pasar el mouse por la fila */
+}
+
+/* 6. FORMULARIOS */
+input[type="text"], 
+input[type="email"], 
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Importante para que no se salga del contenedor */
+    margin-top: 5px;
+}
+
+button {
+    background-color: #2ecc71;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #27ae60;
+}
+
+/* 7. FOOTER */
+footer {
+    text-align: center;
+    background: transparent;
+    box-shadow: none;
+    color: #7f8c8d;
+}
