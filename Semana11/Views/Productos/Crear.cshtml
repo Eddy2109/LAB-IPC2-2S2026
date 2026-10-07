@@ -1,0 +1,52 @@
+@model Semana11.Models.Producto
+
+<h1>Crear producto</h1>
+
+<form method="post" action="/Productos/Crear">
+
+    <div>
+        <label>ID:</label>
+        <input type="number" name="Id" value="@Model?.Id" />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Nombre:</label>
+        <input type="text" name="Nombre" value="@Model?.Nombre" />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Precio:</label>
+        <input type="number"
+               name="Precio"
+               step="0.01"
+               value="@Model?.Precio" />
+    </div>
+
+    <br />
+
+    <button type="submit">
+        Guardar
+    </button>
+
+    <a href="/Productos">
+        Cancelar
+    </a>
+
+</form>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <br />
+
+    <div>
+        @foreach (var error in ViewData.ModelState.Values
+            .SelectMany(v => v.Errors))
+        {
+            <p>@error.ErrorMessage</p>
+        }
+    </div>
+}

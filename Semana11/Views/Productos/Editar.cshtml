@@ -1,0 +1,50 @@
+@model Semana11.Models.Producto
+
+<h1>Editar producto</h1>
+
+<form method="post" action="/Productos/Editar">
+
+    <input type="hidden"
+           name="Id"
+           value="@Model.Id" />
+
+    <div>
+        <label>ID:</label>
+
+        <input type="text"
+               value="@Model.Id"
+               disabled />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Nombre:</label>
+
+        <input type="text"
+               name="Nombre"
+               value="@Model.Nombre" />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Precio:</label>
+
+        <input type="number"
+               name="Precio"
+               step="0.01"
+               value="@Model.Precio" />
+    </div>
+
+    <br />
+
+    <button type="submit">
+        Guardar cambios
+    </button>
+
+    <a href="/Productos">
+        Cancelar
+    </a>
+
+</form>

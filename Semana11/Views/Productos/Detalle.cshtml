@@ -1,0 +1,30 @@
+@model Semana11.Models.Producto
+
+<h1>Detalle del producto</h1>
+
+<p>
+    <strong>ID:</strong>
+    @Model.Id
+</p>
+
+<p>
+    <strong>Nombre:</strong>
+    @Model.Nombre
+</p>
+
+<p>
+    <strong>Precio:</strong>
+    Q @Model.Precio
+</p>
+
+<br />
+
+<a href="/Productos/Editar/@Model.Id">
+    Editar producto
+</a>
+
+<br />
+
+<a href="/Productos">
+    Regresar a productos
+</a>
