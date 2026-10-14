@@ -1,0 +1,45 @@
+{
+    "id": 1,
+    "codigo": "LAP001",
+    "nombre": "Laptop Gamer",
+    "precio": 7500
+}
+
+
+{
+    "id": 2,
+    "codigo": "MOU001",
+    "nombre": "Mouse",
+    "precio": 150
+}
+
+{
+    "id": 4,
+    "codigo": "MON001",
+    "nombre": "Monitor",
+    "precio": 1800
+}
+
+// código inválido
+{
+    "id": 5,
+    "codigo": "MON1",
+    "nombre": "Monitor",
+    "precio": 1800
+}
+
+// Nombre inválido
+{
+    "id": 6,
+    "codigo": "MOU002",
+    "nombre": "Mouse123",
+    "precio": 150
+}
+
+// Precio inválido
+{
+    "id": 7,
+    "codigo": "TEC002",
+    "nombre": "Teclado",
+    "precio": -100
+}
